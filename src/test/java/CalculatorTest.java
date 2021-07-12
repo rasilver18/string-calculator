@@ -40,5 +40,14 @@ public class CalculatorTest {
     public void stringShouldReturnSumOfNumbersOnNewLine(){
         assertEquals(calculator.add("5\n5\n5"), 15);
     }
+    @Test
+    public void negativeNumbersNotAllowed() {
+
+        thrown.expect(IllegalArgumentException.class);
+        thrown.expectMessage("negatives not allowed");
+        calculator.add("-18");
+        calculator.add("-5\n-9,17,-8");
+
+    }
 }
 
