@@ -14,4 +14,8 @@ public class CalculatorTest {
     public void stringShouldReturnSingleNumber(){
         assertEquals(calculator.sum("7"), 7);
     }
+    @Test
+    public void stringShouldSumTwoNumbersSeparatedByComma(){
+        assertEquals(calculator.sum("2,3"), 5);
+    }
 }
